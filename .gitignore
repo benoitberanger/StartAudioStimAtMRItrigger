@@ -1,0 +1,9 @@
+# Ignore everything
+*
+
+# Except the scripts
+!*.m
+!.gitignore
+
+# Except the matlab class definitions
+!@*
