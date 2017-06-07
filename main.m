@@ -69,13 +69,14 @@ fprintf('\n Waiting for MRI trigger... \n')
 
 while 1
     
-    [keyIsDown, ~, keyCode] = KbCheck;
+    [keyIsDown, secs, keyCode] = KbCheck;
     
     if  keyIsDown
         
         if keyCode(MRItrigger)
-            WaveObject.Playback;
+            onset = WaveObject.Playback;
             fprintf('... MRI trigger received. \n')
+            fprintf('Expeted delay between the MRI trigger and the playback : %g ms \n',(onset-secs)*1000)
             break
             
         elseif keyCode(escape)
