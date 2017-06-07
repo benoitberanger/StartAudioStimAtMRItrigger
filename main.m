@@ -1,4 +1,5 @@
 function main
+% This is the main function.
 % The user select a .wav file, then the function waits for the MRI trigger
 % to playback.
 
